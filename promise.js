@@ -2,19 +2,18 @@ const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
 
-const emosi = true;
 
-const promiseOutput = new Promise((resolve, reject) => {
-  if (emosi) {
+
+const promiseOutput = async () => {
+ try {
     const membuatMarah = "Marah";
-    resolve(membuatMarah);
-  } else {
+    
+  } catch {
     const tidakMarah = "tidak marah";
-    reject(tidakMarah);
   }
-});
+};
 
-promiseOutput.then((ok) => console.log(ok)).catch((fail) => console.log(fail));
+promiseOutput();
 
   
 module.exports = {
